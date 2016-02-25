@@ -26,4 +26,5 @@ EXPOSE 32400
 # logs and media mounts
 VOLUME ["/logs", "/media"]
 
-ENTRYPOINT ["/usr/lib/plexmediaserver/Plex Media Server"]
+WORKDIR /usr/lib/plexmediaserver
+ENTRYPOINT ["./start.sh"]
